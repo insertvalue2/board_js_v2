@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 회원가입</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/write.css">
+</head>
+<body>
+    <div class="main-div">
+        <!-- 헤더 섹션과 네비게이션 메뉴 -->
+        <div class="header">
+            <div class="header-menu-box">
+                <div class="menu-box-space">
+                    <span class="menu-1">게시판</span>
+                </div>
+                <div class="menu-box-space">
+                    <span class="menu-1">로그인</span>
+                    <span class="menu-1">회원가입</span>
+                </div>
+            </div>
+        </div>
+        <!-- end of 헤더 섹션 -->
+
+        <!-- 회원 가입 폼 제목 -->
+        <div class="title-box">
+            <h1>회원 가입(by JS)</h1>
+        </div> 
+
+        <!-- 회원가입 폼 테이블 (아이디, 닉네임, 비밀번호, 비밀번호 확인, 중복 확인 버튼) -->
+        <table>
+            <tr>
+                <th>아이디</th>
+                <td class="tb-username">
+                    <input type="text" class="inputs" placeholder="아이디를 입력하세요" value="tenco1">
+                    <button type="button" id="checkIdBtn" >중복확인</button>
+                </td>
+            </tr>
+            <th>닉네임</th>
+                <td class="tb-nickname">
+                    <input type="text" class="inputs" placeholder="닉네임을 입력하세요" value="텐코1">
+                </td>
+            </tr>
+            <th>비밀번호</th>
+                <td class="tb-password">
+                    <input type="password" class="inputs" placeholder="비밀번호를을 입력하세요" value="1234">
+                </td>
+            </tr>
+            <th>비밀번호확인</th>
+                <td class="tb-password">
+                    <input type="password" class="inputs" placeholder="비밀번호를을 입력하세요" value="1234">
+                </td>
+            </tr>
+        </table>
+
+        <div class="btn-area">
+            <button type="button" id="signUpBtn" class="btn">회원가입</button>
+        </div>
+
+        
+        <!-- 푸터 섹션 -->
+        <div class="footer"></div>
+    
+    </div>
+
+    <!-- js를 밑에 두는 이유는 HTML 요소가 모드 로드된 후에 스크립트를 실행하기 위해
+     스크립트가 DOM 요소를 찾을 수 있도록 보장, 페이지 로드 속도를 향상 시킴 -->
+    <script src="../js/signUp.js"></script>
+</body>
+</html>
+
+
+

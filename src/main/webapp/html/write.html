@@ -1,62 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="stylesheet" href="../css/styles.css" />
-        <link rel="stylesheet" href="../css/write.css" />
-    </head>
-    <body>
-        <div class="main-div">
-            <div class="header">
-                <div class="header-menu-box">
-                    <div class="menu-box-space"><span class="menu-1">게시판</span></div>
-                    <div class="menu-box-space">
-                        <span class="menu-1">로그인</span>
-                        <span class="menu-1">회원가입</span>
-                    </div>
-                </div>
-            </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="../css/common.css" />
+		<link rel="stylesheet" href="../css/header.css" />
+		<link rel="stylesheet" href="../css/write.css" />
+	</head>
+	<body>
+		<div class="main-div">
+			<!-- 헤더 섹션과 네비게이션 메뉴 -->
+			<div class="header">
+				<div class="header-menu-box">
+					<div class="menu-box-space">
+						<span class="menu-1" id="board">게시판</span>
+					</div>
+					<div class="menu-box-space">
+						<span class="menu-2" id="signIn">로그인</span>
+						<span class="menu-3" id="signUp">회원가입</span>
+					</div>
+				</div>
+			</div>
+			<!-- end of 헤더 섹션 -->
 
-            <div class="title-box">
-                <h1>글쓰기</h1>
-            </div>
+			<div class="title-box">
+				<h1>글쓰기</h1>
+			</div>
 
-            <table>
-                <tr>
-                    <th>제목</th>
-                    <td>
-                        <input type="text" class="title" />
-                    </td>
-                </tr>
-                <tr>
-                    <th>작성자</th>
-                    <td>
-                        <input type="text" class="username" readonly />
-                    </td>
-                </tr>
-                <tr>
-                    <th>첨부</th>
-                    <td>
-                        <input type="file" class="file" accept="image/*" />
-                    </td>
-                </tr>
-                <tr>
-                    <th>내용</th>
-                    <td>
-                        <div class="img-box"></div>
-                        <textarea name="" id="" class="content"></textarea>
-                    </td>
-                </tr>
-            </table>
-            <div class="btn-area">
-                <button type="button">글쓰기</button>
-            </div>
-
-            
-        </div>
-
-        <script src="../js/write.js"></script>
-    </body>
+			<table>
+				<tr>
+					<th>제목</th>
+					<td>
+						<input type="text" class="inputs" />
+					</td>
+				</tr>
+				<tr>
+					<th>작성자</th>
+					<td>
+						<input type="text" class="username inputs" readonly />
+					</td>
+				</tr>
+				<tr>
+					<th>첨부</th>
+					<td>
+						<input type="file" class="file" accept="image/*" />
+					</td>
+				</tr>
+				<tr>
+					<th>내용</th>
+					<td>
+						<div class="img-box"></div>
+						<textarea name="" id="" class="content"></textarea>
+					</td>
+				</tr>
+			</table>
+			<div class="btn-area">
+				<button type="button" class="btn">글쓰기</button>
+			</div>
+		</div>
+		<script src="../js/header.js"></script>
+		<script src="../js/write.js"></script>
+	</body>
 </html>

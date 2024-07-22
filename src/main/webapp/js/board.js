@@ -7,7 +7,7 @@ const paginationContainer = document.querySelector(".num-box");
 const storedBoardList = JSON.parse(localStorage.getItem("boardList"));
 
 // 현재 페이지
-let currentPage = 0; 
+let currentPage = 0;
 const postsPerPage = 2; // 한 페이지당 게시글 수
 
 // 초기 로드
@@ -38,13 +38,14 @@ function loadPosts(page) {
             `;
         }
         boardContainer.innerHTML = postElements;
+        // row 한줄 선택 
         const postElementsCollection = document.querySelectorAll(".board");
         // 주의! 요소가 생성된 이후에 이벤트 리스너를 등록할 수 있다. 
         addPostClickListeners(postElementsCollection);
 
         createPagination(storedBoardList, page);
     } else {
-        boardContainer.innerHTML = "<div class='no-list'>조회된 게시글이 없습니다</div>";
+        boardContainer.innerHTML = "<div class='no-list' style='text-align:center; margin-top:20px;'>조회된 게시글이 없습니다</div>";
     }
 }
 
@@ -60,13 +61,13 @@ function createPagination(postList, currentPage) {
     // data-* 속성은 HTML5에서 사용자 정의 데이터를 요소에 저장할 수 있도록 제공하는 기능
     for (let i = 0; i < totalPages; i++) {
         paginationHTML += `
-            <span class="num" data-page="${i}">${i + 1}</span>
+            <span class="num" data-page="${i}" style="font-size: 1.4em;">${i + 1}</span>
         `;
     }
-
     paginationContainer.innerHTML = paginationHTML;
-    const pageNumbers = document.querySelectorAll(".num");
 
+    // 생성된 페이지 번호의 요소에 전체 접근 
+    const pageNumbers = document.querySelectorAll(".num");
     // 현재 페이지 번호 스타일 적용
     pageNumbers[currentPage].style.backgroundColor = "aqua";
     pageNumbers[currentPage].style.fontWeight = 700;
@@ -92,6 +93,6 @@ function addPostClickListeners(postElements) {
     });
 }
 
-writeButton.onclick = function() {
+writeButton.onclick = function () {
     location.href = "write.html";
 }

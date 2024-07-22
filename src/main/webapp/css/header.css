@@ -1,0 +1,34 @@
+/* header.css */
+
+/* 헤더 스타일 */
+.header {
+	width: 100%; /* 전체 너비 설정 */
+	height: 50px; /* 고정 높이 설정 */
+	display: flex; /* 플렉스 박스 설정 */
+	justify-content: space-between; /* 아이템 간 공간 균등 분배 */
+	align-items: center; /* 아이템을 수직 가운데 정렬 */
+	background-color: gray; /* 배경색 설정 */
+	box-sizing: border-box; /* 패딩과 테두리를 너비와 높이에 포함 */
+	padding: 0 20px; /* 좌우 패딩 추가 */
+}
+
+/* 헤더 메뉴 박스 스타일 */
+.header-menu-box {
+	display: flex; /* 플렉스 박스 설정 */
+	justify-content: space-between; /* 공간을 균등하게 배치 */
+	align-items: center; /* 아이템을 수직으로 가운데 정렬 */
+	width: 100%; /* 전체 너비 설정 */
+}
+
+/* 메뉴 박스 공간 스타일 */
+.menu-box-space {
+	display: flex; /* 플렉스 박스 설정 */
+	align-items: center; /* 아이템을 수직으로 가운데 정렬 */
+}
+
+/* 인라인 요소인 span에 대한 스타일 */
+.menu-box-space span {
+	padding: 5px 10px; /* 안쪽 여백 설정 */
+	color: white; /* 글자색 흰색 */
+	cursor: pointer; /* 커서 포인터 모양 */
+}

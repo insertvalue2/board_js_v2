@@ -31,15 +31,71 @@
 	border-bottom: 2px solid black;
 }
 
-.head-2 {
-	flex: 2;
-	display : flex;
-	justify-content: center;
+.board{
+    display: flex;
+    cursor: pointer;
+    border-bottom: 1px solid black;
+    padding: 10px;
 }
 
-.head>div {
-	padding: 5px 20px;
+.head div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.board div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.head-1{
+    
+    width: 70px;
+}
+.head-2{
+    
+    width: 100%;
+}
+.head-3{
+    
+    width: 200px;
+}
+.head-4{
+    
+    width: 200px;
+}
+.head-5{
+    
+    width: 100px;
+}
+
+
+.board-content-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.board-1{
+    width: 70px;
+}
+.board-2{
+    width: 100%;
+    text-align: left;
+}
+.board-3{
+    width: 200px;
+}
+.board-4{
+    width: 200px;
+}
+.board-5{
+    width: 100px;
+}
+
+
 
 
 .button-box {

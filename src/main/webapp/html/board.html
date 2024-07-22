@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>board.html 화면</h1>    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/board.css" />
+    </head>
+    <body>
+        <div class="main-div">
+            <div class="header">
+                <div class="header-menu-box">
+                    <div class="menu-box-space"><span class="menu-1">게시판</span></div>
+                    <div class="menu-box-space">
+                        <span class="menu-1">로그인</span>
+                        <span class="menu-1">회원가입</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="title-box">
+                <h1>게시판</h1>
+            </div>
+
+            <div class="content-box">
+                <div class="board-box">
+                    <div class="head">
+                        <div class="head-1">번호</div>
+                        <div class="head-2">제목</div>
+                        <div class="head-3">작성자</div>
+                        <div class="head-4">작성일</div>
+                        <div class="head-5">조회수</div>
+                    </div>
+                    <div class="board-content-box">
+                        
+                    </div>
+                </div>
+                <div class="button-box">
+                    <div class="page-box">
+                        <span class="left">◀</span>
+                        <div class="num-box">
+                            <span class="num">1</span>
+                        </div>
+                        <span class="right">▶</span>
+                    </div>
+                    <div class="write-button-box">
+                        <button type="button" class="btn">글쓰기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/board.js"></script>
+    </body>
 </html>

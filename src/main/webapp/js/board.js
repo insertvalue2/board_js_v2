@@ -85,12 +85,13 @@ function createPagination(postList, currentPage) {
 
 // 게시글 클릭 시 페이지 이동 함수
 function addPostClickListeners(postElements) {
-    postElements.forEach((postElement, index) => {
-        postElement.onclick = () => {
-            localStorage.setItem("page", index);
-            location.href = "http://127.0.0.1:5500/html/read.html";
+    for (let i = 0; i < postElements.length; i++) {
+        postElements[i].onclick = function () {
+            // 상세글에서 해당 값으로 조회 
+            localStorage.setItem("page", i);
+            location.href = "read.html";
         };
-    });
+    }
 }
 
 writeButton.onclick = function () {

@@ -6,7 +6,7 @@ const imgViewBox = document.querySelector('.img-box');
 const content = document.querySelector('.content');
 const button = document.querySelector('button');
 const day = new Date();
-let imageData = null; 
+let imageData = null;
 console.log('--------------------------');
 
 // 1. 로컬스토리지에 있는 사용자 목록 가져오기
@@ -32,7 +32,7 @@ function fileUpload(event) {
 
     // event.target 속성은 이벤트가 발생한 요소(elements)인 <input> 요소 자체 
     const file = event.target.files[0]; // 파일리스트에서 0번째 파일 객체 반환 
-     
+
     // 파일 하기전  
     // 유효성 검사(크기 및 확장자), 파일 미리보기, 파일 MIME TYPE 검사
     console.log(file.size);
@@ -40,16 +40,16 @@ function fileUpload(event) {
     // 1kb ->  1024byte 
     // 1mb -> 1024kb 
     // 5mb -> 바이트로 변환 5242880 (1024 * 1024 * 5)
-    
+
     // 유효성 검사 -  파일크기 막기 
-    if(file.size >= 5242880) {
+    if (file.size >= 5242880) {
         alert("첨부 파일은 5MB 이하만 가능합니다");
         event.target.value = '';
         return;
     }
 
     // 유효성 검사 - 허용하는 파일 확장자 
-    const validFileTypes = ['image/jpeg', 'image/png', 'image/gif']; 
+    const validFileTypes = ['image/jpeg', 'image/png', 'image/gif'];
     if (!validFileTypes.includes(file.type)) {
         alert('유효한 파일 타입이 아닙니다. (jpeg, png, gif만 허용)');
         return;
@@ -58,11 +58,11 @@ function fileUpload(event) {
     // 파일 미리보기기능 추가  
     const reader = new FileReader();
     // 이벤트 핸들러 처리 
-    reader.onload = function(e) {
+    reader.onload = function (e) {
         imgViewBox.innerHTML = `<img src="${e.target.result}" alt="" style="max-width: 100%; height: auto;">`;
         imageData = reader.result;
 
-        // console.log('imageData', imageData);
+        console.log('imageData', imageData);
     }
     // 파일 읽기 - 비동기적 동작(지정된 File,Blob 객체를 읽고 그 데이터를 Base64 로 변환)
     // Base64란 - 바이너리 데이터를 텍스트 형식으로 인코딩하는 방법 중 하나.
@@ -102,23 +102,23 @@ function addEventListener() {
 }
 
 // 여기서는 함수 표현식 사용해보기 
-const saveBoard = function() {
-    if(title.value === "" ) {
+const saveBoard = function () {
+    if (title.value === "") {
         alert('제목을 입력하시오');
         title.focus();
-        return; 
+        return;
     }
 
-    if(username.value === "") {
+    if (username.value === "") {
         alert("작성자를 입력해주세요");
         username.focus();
-        return; 
+        return;
     }
 
-    if(content.value ==="" ) {
+    if (content.value == "") {
         alert('내용을 입력해주세요');
         content.focus();
-        return; 
+        return;
     }
 
     const board = {
@@ -131,13 +131,13 @@ const saveBoard = function() {
     };
 
     // 로컬 스토리지에 저장 
-    if(localStorage.getItem('boardList') == null ) {
+    if (localStorage.getItem('boardList') == null) {
         // 최초 저장 
         const boardArray = new Array();
         boardArray.push(board);
         // 배열을 JSON 형태로 변환 후 저장하기 
         localStorage.setItem("boardList", JSON.stringify(boardArray));
-        
+
     } else {
         // JSON 형식으로 데이터가 저장되어 있는 상태의 BoardList 꺼내기 
         let arrays = JSON.parse(localStorage.getItem('boardList'));
@@ -151,7 +151,7 @@ const saveBoard = function() {
     console.log(typeof temp);
 
     // 화면 이동
-    // location.href = 'board.html';
+    location.href = 'board.html';
 }
 
 isSignIn();

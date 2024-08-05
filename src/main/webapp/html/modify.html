@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="../css/common.css" />
+		<link rel="stylesheet" href="../css/header.css" />
+	</head>
+	<body>
+		<div class="main-div">
+			<!-- 헤더 섹션과 네비게이션 메뉴 -->
+			<div class="header">
+				<div class="header-menu-box">
+					<div class="menu-box-space">
+						<span class="menu-1" id="board">게시판</span>
+					</div>
+					<div class="menu-box-space">
+						<span class="menu-2" id="signIn">로그인</span>
+						<span class="menu-3" id="signUp">회원가입</span>
+					</div>
+				</div>
+			</div>
+			<!-- end of 헤더 섹션 -->
+
+			<div class="title-box">
+				<h1>게시글 수정하기(by JS)</h1>
+			</div>
+
+			<table>
+				<tr>
+					<th>제목</th>
+					<td>
+						<input type="text" class="inputs" id="title" readonly />
+					</td>
+				</tr>
+				<tr>
+					<td>작성자</td>
+					<td>
+						<input type="text" class="inputs" id="username" readonly />
+					</td>
+				</tr>
+				<tr>
+					<td>내용</td>
+					<td>
+						<div class="img-box"></div>
+						<pre class="content" id="content" readonly="true"></pre>
+					</td>
+				</tr>
+			</table>
+
+			<div class="btn-area">
+				<button type="button" class="btn">저장하기</button>
+			</div>
+		</div>
+		
+	</body>
+</html>
